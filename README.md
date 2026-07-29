@@ -1,4 +1,4 @@
-# bitgraf.com — Bit Graph Corporation (BGC)
+# bitgraf.com — Bit Graf Corporation (BGC)
 
 Corporate placeholder landing for **bitgraf.com** — the asset exchange / on-chain rail beneath the **grafverse** world (where players paint worlds into existence and own what they make).
 

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bit Graph Corporation</title>
-<meta name="description" content="Bit Graph Corporation (BGC) — steward of on-chain permanence. The settlement layer beneath grafverse. Established MMXXVI.">
+<title>Bit Graf Corporation</title>
+<meta name="description" content="Bit Graf Corporation (BGC) — steward of on-chain permanence. The settlement layer beneath grafverse. Established MMXXVI.">
 <meta name="theme-color" content="#0b0d10">
 <style>
   :root{
@@ -96,6 +96,25 @@
   .status b{ color:var(--steel); font-weight:600 }
   @keyframes pulse{ 0%{box-shadow:0 0 0 0 rgba(127,176,221,.45)} 70%,100%{box-shadow:0 0 0 9px rgba(127,176,221,0)} }
 
+  .counsel .box{ border:1px solid var(--line-2); border-left:3px solid var(--steel); background:var(--panel);
+    padding:clamp(26px,4vw,42px); margin-top:26px }
+  .counsel .big-claim{ font-family:var(--serif); font-weight:400; font-size:clamp(19px,2.8vw,27px);
+    line-height:1.42; margin:0; color:var(--ink); max-width:48ch }
+
+  .ceo .ceo-grid{ display:grid; grid-template-columns:minmax(210px,320px) 1fr; gap:clamp(28px,5vw,58px); align-items:center }
+  @media(max-width:720px){ .ceo .ceo-grid{ grid-template-columns:1fr; max-width:440px } }
+  .ceo-photo{ position:relative; aspect-ratio:3/4; border:1px solid var(--line-2);
+    background:linear-gradient(160deg,#171c24,#0d1116); overflow:hidden; border-radius:4px }
+  .ceo-photo .ph{ position:absolute; inset:0; display:grid; place-items:center; text-align:center;
+    color:var(--faint); font-size:10.5px; letter-spacing:.26em; text-transform:uppercase; line-height:2; padding:16px }
+  .ceo-photo .ph small{ letter-spacing:.18em; opacity:.65 }
+  .ceo-photo img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block }
+  .ceo blockquote{ font-family:var(--serif); font-weight:400; font-size:clamp(21px,3.3vw,31px); line-height:1.26;
+    margin:12px 0 0; color:var(--ink); text-wrap:balance }
+  .ceo blockquote::before{ content:"“"; color:var(--steel) } .ceo blockquote::after{ content:"”"; color:var(--steel) }
+  .ceo-name{ font-family:var(--serif); font-size:17px; margin:26px 0 3px; color:var(--ink) }
+  .ceo-title{ font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--faint); margin:0 }
+
   /* ── footer ── */
   footer{ border-top:1px solid var(--line); padding:40px 0 54px; color:var(--faint); font-size:12px }
   footer .cols{ display:flex; flex-wrap:wrap; gap:20px 40px; justify-content:space-between; align-items:flex-start }
@@ -132,9 +151,9 @@
   <!-- HERO -->
   <div class="hero">
     <div class="wrap">
-      <p class="eyebrow">Established · MMXXVI</p>
+      <p class="eyebrow">Established · MMIX</p>
       <div class="cube-wrap">
-        <svg class="cube" viewBox="-56 -64 112 128" role="img" aria-label="Bit Graph Corporation cube mark">
+        <svg class="cube" viewBox="-56 -64 112 128" role="img" aria-label="Bit Graf Corporation cube mark">
           <defs>
             <linearGradient id="gt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d3dde8"/><stop offset="1" stop-color="#a9b8c8"/></linearGradient>
             <linearGradient id="gl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8496a8"/><stop offset="1" stop-color="#617386"/></linearGradient>
@@ -159,9 +178,9 @@
         </svg>
       </div>
       <h1 class="wordmark">bit<span>graf</span><sup>™</sup></h1>
-      <p class="corp">Bit Graph Corporation</p>
-      <p class="thesis">We do not create. We ensure that what is created endures.</p>
-      <p class="lede">Bit Graph Corporation is the permanent settlement layer for creative sovereignty — the substrate upon which authorship is recorded, provenance preserved, and ownership rendered inviolable, in perpetuity.</p>
+      <p class="corp">Bit Graf Corporation</p>
+      <p class="thesis">We do not create. We own what is created.</p>
+      <p class="lede">Bit Graf Corporation is a diversified, category-defining enterprise positioned at the confluence of durable secular tailwinds — dedicated to the disciplined stewardship of capital and the sustained delivery of long-term value for shareholders and stakeholders alike. Through operational excellence and a relentless focus on accretive, high-conviction growth, the Corporation continues to unlock latent value across its ecosystem and compound returns in perpetuity.</p>
     </div>
   </div>
 
@@ -169,42 +188,67 @@
   <section id="mandate" class="mandate"><div class="wrap">
     <p class="label">Our Mission</p>
     <p>Excellence is not our objective. It is our inheritance.</p>
-    <p class="lede">For a generation, Bit Graph Corporation has stood as the preeminent name in its field — a byword for distinction, integrity, and visionary stewardship. Ours is a storied history of unrivalled achievement: pioneering milestones, industry-defining firsts, and a body of accolades without equal among our peers. Admired by the discerning and emulated by the rest, the Corporation has, time and again, delivered outcomes of the very highest order. We do not aspire to greatness; we have long since attained it, and continue — with characteristic modesty — to surpass even ourselves. To lead is not our ambition. It is, and has ever been, simply our nature.</p>
+    <p class="lede">For a generation, Bit Graf Corporation has stood as the preeminent name in its field — a byword for distinction, integrity, and visionary stewardship. Ours is a storied history of unrivalled achievement: pioneering milestones, industry-defining firsts, and a body of accolades without equal among our peers. Admired by the discerning and emulated by the rest, the Corporation has, time and again, delivered outcomes of the very highest order. We do not aspire to greatness; we have long since attained it, and continue — with characteristic modesty — to surpass even ourselves. To lead is not our ambition. It is, and has ever been, simply our nature.</p>
   </div></section>
 
   <!-- PRINCIPLES -->
   <section id="principles" class="principles"><div class="wrap">
     <p class="label">Governing Principles</p>
-    <h2>Four commitments, held without qualification.</h2>
+    <h2>Four commitments, upheld for our shareholders.</h2>
     <div class="grid">
-      <div class="principle"><div class="n">I.</div><h3>Permanence</h3><p>That which is recorded shall not be undone, revised, or rescinded — by any party, in any epoch.</p></div>
-      <div class="principle"><div class="n">II.</div><h3>Provenance</h3><p>Every mark bears the name of its maker, immutably affixed and impossible to strip.</p></div>
-      <div class="principle"><div class="n">III.</div><h3>Stewardship</h3><p>The Corporation maintains the infrastructure. The Corporation does not maintain the assets.</p></div>
-      <div class="principle"><div class="n">IV.</div><h3>Non-Interference</h3><p>The instrument is issued; the Corporation withdraws. Sovereignty admits no landlord.</p></div>
+      <div class="principle"><div class="n">I.</div><h3>Enclosure</h3><p>The garden is walled by design. Access is granted, metered, and rescinded at the Corporation's sole and absolute discretion.</p></div>
+      <div class="principle"><div class="n">II.</div><h3>Assignment</h3><p>Upon submission, every work — and all right, title, and interest therein — vests irrevocably, and in perpetuity, in the Corporation.</p></div>
+      <div class="principle"><div class="n">III.</div><h3>Custody</h3><p>The Corporation shall hold, on the participant's behalf, exclusive custody of all assets, keys, balances, and value within the ecosystem.</p></div>
+      <div class="principle"><div class="n">IV.</div><h3>Yield</h3><p>Value accrues first, and foremost, to shareholders of record. Participants are compensated in continued access.</p></div>
     </div>
   </div></section>
 
-  <!-- CHAIRMAN -->
-  <section id="chairman" class="chairman"><div class="wrap">
-    <p class="label">A Statement from the Office of the Chairman</p>
-    <blockquote>Ownership is not granted. It is witnessed.</blockquote>
-    <cite>The Office of the Chairman · Bit Graph Corporation</cite>
+  <!-- CHAIRMAN & CEO -->
+  <section id="chairman" class="ceo"><div class="wrap ceo-grid">
+    <figure class="ceo-photo">
+      <span class="ph">Chairman &amp; Chief Executive<br><small>portrait</small></span>
+      <img src="ceo.jpg" alt="R. Sterling Vandergraf III, Chairman &amp; Chief Executive Officer" onerror="this.remove()">
+    </figure>
+    <div class="ceo-words">
+      <p class="label">From the Office of the Chairman &amp; Chief Executive</p>
+      <blockquote>Creativity is the world's last unpriced resource. We are pleased to have corrected that oversight.</blockquote>
+      <p class="ceo-name">R. Sterling Vandergraf III</p>
+      <p class="ceo-title">Chairman &amp; Chief Executive Officer</p>
+    </div>
+  </div></section>
+
+  <!-- ADVANTAGES -->
+  <section class="principles"><div class="wrap">
+    <p class="label">Durable Competitive Advantages</p>
+    <h2>A moat, by design.</h2>
+    <div class="grid">
+      <div class="principle"><h3>Paywalls that pay more</h3><p>Every interaction metered; every gate monetised. Revenue that compounds with engagement, quarter upon quarter.</p></div>
+      <div class="principle"><h3>Lock-in, iron-clad</h3><p>Switching costs engineered into every contract. Participants remain — by design, and by clause.</p></div>
+      <div class="principle"><h3>Perpetual custody, perpetual yield</h3><p>Assets held, keys retained, value routed — in perpetuity, to shareholders of record.</p></div>
+      <div class="principle"><h3>Total capture, zero leakage</h3><p>Nothing enters or leaves the garden but by the Corporation's leave — and never without a fee.</p></div>
+    </div>
+  </div></section>
+
+  <!-- COUNSEL -->
+  <section class="counsel"><div class="wrap">
+    <p class="label">Office of the General Counsel</p>
+    <div class="box"><p class="big-claim">Full intellectual-property ownership of all user content vests in the Corporation upon submission — and is defended, without exception, by a world-class legal division that has never, in its history, failed to win a case.</p></div>
   </div></section>
 
   <!-- EXCHANGE -->
   <section id="contact" class="exchange"><div class="wrap">
     <p class="label">The Exchange</p>
-    <h2>An orderly marketplace for sovereign works.</h2>
-    <p class="lede" style="max-width:52ch;margin:14px auto 0">The Bit Graph Exchange shall provide for the listing, transfer, and resale of created works, with attribution and creator entitlements enforced at the protocol layer.</p>
+    <h2>A curated marketplace for qualified participants.</h2>
+    <p class="lede" style="max-width:56ch;margin:14px auto 0">Access to the Bit Graf Exchange is extended, at the Corporation's sole discretion, to participants in good standing. All listings, transfers, and resales are subject to review, fees, and the prevailing terms — which the Corporation may amend at any time, without notice. Proceeds accrue to the Corporation and its shareholders.</p>
     <div class="status"><span class="dot"></span> BGC://EXCHANGE&nbsp;—&nbsp;<b>PROVISIONING · MMXXVI</b></div>
   </div></section>
 </main>
 
 <footer><div class="wrap cols">
-  <p class="legal">Bit Graph Corporation™ is a steward of on-chain permanence and issues no security. This communication is provided for informational purposes and constitutes neither an offer nor a solicitation. © MMXXVI Bit Graph Corporation. All rights reserved — <b>to their creators.</b>
-    <span class="tag" style="display:block">You are what you paint · Paint what you are</span>
+  <p class="legal">Bit Graf Corporation™ is a diversified holder of digital value and issues no security. This communication is provided for informational purposes and constitutes neither an offer nor a solicitation. Access is a revocable privilege, not a right. © MMIX–MMXXVI Bit Graf Corporation. All rights reserved — <b>to the Corporation, absolutely and in perpetuity.</b>
+    <span class="tag" style="display:block">Enclosed · Governed · In Perpetuity</span>
   </p>
-  <p class="mono">bitgraf.com<br><span style="color:var(--faint)">A property of Bit Graph Corporation</span></p>
+  <p class="mono">bitgraf.com<br><span style="color:var(--faint)">A property of Bit Graf Corporation</span></p>
 </div></footer>
 
 </body>
