@@ -5,4 +5,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH="$HOME/bitgraf.com/"
-    - /bin/cp index.html "$DEPLOYPATH"          # the corporate coming-soon landing
+    - /bin/cp index.html "$DEPLOYPATH"          # the corporate landing
+    - /bin/cp ceo.jpg "$DEPLOYPATH"             # the Chairman & CEO portrait
