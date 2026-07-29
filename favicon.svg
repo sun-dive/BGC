@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <rect width="120" height="120" rx="22" fill="#0b0d10"/>
+  <g transform="translate(60 62)">
+    <polygon points="0,-40 35,-20 0,0 -35,-20" fill="#c2cedb"/>
+    <polygon points="-35,-20 0,0 0,40 -35,20" fill="#7d90a3"/>
+    <polygon points="35,-20 0,0 0,40 35,20" fill="#485767"/>
+    <g stroke="#0b0d10" stroke-width="1.6" fill="none" opacity=".5">
+      <path d="M0,-40 L0,0 M-35,-20 L0,0 M35,-20 L0,0 M0,0 L0,40"/>
+    </g>
+    <path d="M-35,-20 L0,-40 L35,-20" fill="none" stroke="#7fb0dd" stroke-width="2.2"/>
+  </g>
+</svg>

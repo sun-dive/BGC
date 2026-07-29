@@ -7,3 +7,5 @@ deployment:
     - export DEPLOYPATH="$HOME/bitgraf.com/"
     - /bin/cp index.html "$DEPLOYPATH"          # the corporate landing
     - /bin/cp ceo.jpg "$DEPLOYPATH"             # the Chairman & CEO portrait
+    - /bin/cp og.jpg "$DEPLOYPATH"              # link-preview / social card
+    - /bin/cp favicon.svg "$DEPLOYPATH"         # cube favicon
