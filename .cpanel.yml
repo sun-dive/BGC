@@ -1,0 +1,8 @@
+---
+# cPanel Git™ Version Control deployment for bitgraf.com — the corporate placeholder landing.
+# In cPanel → Git Version Control: "Update from Remote" then "Deploy HEAD Commit".
+# DEPLOYPATH = the bitgraf.com document root, relative to $HOME. Confirm in cPanel → Domains.
+deployment:
+  tasks:
+    - export DEPLOYPATH="$HOME/bitgraf.com/"
+    - /bin/cp index.html "$DEPLOYPATH"          # the corporate coming-soon landing

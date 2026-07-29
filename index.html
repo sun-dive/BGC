@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bit Graph Corporation</title>
+<meta name="description" content="Bit Graph Corporation (BGC) — steward of on-chain permanence. The settlement layer beneath grafverse. Established MMXXVI.">
+<meta name="theme-color" content="#0b0d10">
+<style>
+  :root{
+    --ground:#0b0d10; --panel:#101318; --line:#1e242d; --line-2:#2a323d;
+    --ink:#e6eaef; --dim:#8b939e; --faint:#5c646f;
+    --steel:#7fb0dd; --steel-deep:#3f6f97; --plat:#c3ccd6;
+    --serif:"Iowan Old Style",Georgia,"Times New Roman",Times,serif;
+    --sans:ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    --wrap:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--ground); color:var(--ink); font-family:var(--sans);
+    -webkit-font-smoothing:antialiased; line-height:1.6; overflow-x:hidden;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:52px 52px, 52px 52px; background-position:center top;
+  }
+  a{color:inherit; text-decoration:none}
+  .wrap{max-width:var(--wrap); margin:0 auto; padding:0 clamp(20px,5vw,48px)}
+  .eyebrow{ font-size:11px; letter-spacing:.34em; text-transform:uppercase; color:var(--steel);
+    font-weight:600; }
+  .label{ font-size:11px; letter-spacing:.32em; text-transform:uppercase; color:var(--faint); }
+  h2{ font-family:var(--serif); font-weight:400; font-size:clamp(26px,4.4vw,40px); line-height:1.15;
+    letter-spacing:.005em; margin:.5em 0 .1em; color:var(--ink); text-wrap:balance; }
+  .rule{ height:1px; background:var(--line-2); border:0; margin:0 }
+
+  /* ── header ── */
+  header{ position:sticky; top:0; z-index:10; backdrop-filter:blur(8px);
+    background:rgba(11,13,16,.72); border-bottom:1px solid var(--line); }
+  .bar{ display:flex; align-items:center; justify-content:space-between; height:64px }
+  .brandmark{ display:flex; align-items:center; gap:12px }
+  .brandmark svg{ width:24px; height:28px; display:block }
+  .brandmark b{ font-weight:700; letter-spacing:.01em; font-size:15px }
+  .brandmark sup{ font-size:8px; color:var(--faint); letter-spacing:.1em }
+  nav{ display:flex; gap:clamp(16px,3vw,34px) }
+  nav a{ font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--dim); transition:color .2s }
+  nav a:hover{ color:var(--ink) }
+  @media(max-width:640px){ nav{display:none} }
+
+  /* ── hero ── */
+  .hero{ text-align:center; padding:clamp(60px,11vw,120px) 0 clamp(46px,7vw,74px); position:relative }
+  .hero::after{ content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
+    background:radial-gradient(680px 420px at 50% 8%, rgba(127,176,221,.10), transparent 62%) }
+  .cube-wrap{ position:relative; width:max-content; margin:0 auto 30px }
+  .cube-wrap::before{ content:""; position:absolute; inset:-46%; z-index:-1;
+    background:radial-gradient(closest-side, rgba(127,176,221,.20), transparent 70%); filter:blur(5px) }
+  .cube{ width:clamp(104px,15vw,140px); height:auto; display:block; animation:float 7s ease-in-out infinite }
+  .sheen{ mix-blend-mode:screen; animation:sheen 6.5s ease-in-out infinite }
+  @keyframes float{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  @keyframes sheen{ 0%,18%{opacity:0;transform:translate(-28px,-13px)} 42%{opacity:.9} 66%,100%{opacity:0;transform:translate(28px,13px)} }
+  .wordmark{ font-weight:700; font-size:clamp(38px,8vw,74px); letter-spacing:-.01em; line-height:1; margin:0 }
+  .wordmark span{ color:var(--steel) }
+  .wordmark sup{ font-size:.24em; color:var(--faint); font-weight:500; letter-spacing:0 }
+  .corp{ margin:15px 0 0; font-size:clamp(11px,1.5vw,12.5px); letter-spacing:.4em; text-transform:uppercase; color:var(--dim); padding-left:.4em }
+  .thesis{ font-family:var(--serif); font-weight:400; font-size:clamp(23px,4vw,38px); line-height:1.28;
+    max-width:17ch; margin:42px auto 0; color:var(--ink); text-wrap:balance }
+  .lede{ max-width:56ch; margin:20px auto 0; font-size:clamp(14px,1.8vw,16px); color:var(--dim) }
+
+  /* ── sections ── */
+  section{ padding:clamp(54px,8vw,92px) 0; border-top:1px solid var(--line) }
+  .mandate p{ font-family:var(--serif); font-size:clamp(18px,2.6vw,24px); line-height:1.55; max-width:34ch;
+    color:var(--ink); margin:.7em 0 0 }
+  .mandate .lede{ font-family:var(--sans); max-width:60ch; margin-left:0 }
+
+  .principles .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:1px;
+    background:var(--line); border:1px solid var(--line); margin-top:34px }
+  .principle{ background:var(--ground); padding:28px clamp(20px,2.4vw,30px) 34px }
+  .principle .n{ font-family:var(--mono); font-size:12px; color:var(--steel-deep) }
+  .principle h3{ font-family:var(--serif); font-weight:400; font-size:22px; margin:14px 0 10px; letter-spacing:.01em }
+  .principle p{ font-size:14px; color:var(--dim); margin:0 }
+
+  .chairman{ text-align:center }
+  .chairman blockquote{ font-family:var(--serif); font-weight:400; font-size:clamp(24px,4.6vw,44px);
+    line-height:1.24; max-width:20ch; margin:20px auto 0; color:var(--ink); text-wrap:balance }
+  .chairman blockquote::before{ content:"“"; color:var(--steel); }
+  .chairman blockquote::after{ content:"”"; color:var(--steel); }
+  .chairman cite{ display:block; margin-top:30px; font-style:normal; font-size:11px; letter-spacing:.28em;
+    text-transform:uppercase; color:var(--faint) }
+
+  .exchange{ text-align:center }
+  .status{ display:inline-flex; align-items:center; gap:12px; font-family:var(--mono); font-size:12.5px;
+    letter-spacing:.06em; color:var(--faint); margin-top:20px }
+  .status .dot{ width:7px; height:7px; border-radius:50%; background:var(--steel);
+    animation:pulse 2.4s ease-out infinite }
+  .status b{ color:var(--steel); font-weight:600 }
+  @keyframes pulse{ 0%{box-shadow:0 0 0 0 rgba(127,176,221,.45)} 70%,100%{box-shadow:0 0 0 9px rgba(127,176,221,0)} }
+
+  /* ── footer ── */
+  footer{ border-top:1px solid var(--line); padding:40px 0 54px; color:var(--faint); font-size:12px }
+  footer .cols{ display:flex; flex-wrap:wrap; gap:20px 40px; justify-content:space-between; align-items:flex-start }
+  footer .legal{ max-width:58ch; line-height:1.7 }
+  footer .legal b{ color:var(--dim); font-weight:500 }
+  footer .mono{ font-family:var(--mono); letter-spacing:.04em }
+  footer .tag{ margin-top:26px; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--faint) }
+
+  @media (prefers-reduced-motion:reduce){ .cube,.sheen,.status .dot{animation:none} html{scroll-behavior:auto} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brandmark" href="#top">
+      <svg viewBox="-52 -60 104 120" aria-hidden="true">
+        <polygon points="0,-52 45,-26 0,0 -45,-26" fill="#c2cedb"/>
+        <polygon points="-45,-26 0,0 0,52 -45,26" fill="#7d90a3"/>
+        <polygon points="45,-26 0,0 0,52 45,26" fill="#485767"/>
+      </svg>
+      <b>bitgraf<sup>™</sup></b>
+    </a>
+    <nav>
+      <a href="#mandate">Mandate</a>
+      <a href="#principles">Principles</a>
+      <a href="#chairman">Governance</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Established · MMXXVI</p>
+      <div class="cube-wrap">
+        <svg class="cube" viewBox="-56 -64 112 128" role="img" aria-label="Bit Graph Corporation cube mark">
+          <defs>
+            <linearGradient id="gt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d3dde8"/><stop offset="1" stop-color="#a9b8c8"/></linearGradient>
+            <linearGradient id="gl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8496a8"/><stop offset="1" stop-color="#617386"/></linearGradient>
+            <linearGradient id="gr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#51606f"/><stop offset="1" stop-color="#374350"/></linearGradient>
+            <clipPath id="cc"><polygon points="0,-52 45,-26 45,26 0,52 -45,26 -45,-26"/></clipPath>
+          </defs>
+          <polygon points="0,-52 45,-26 0,0 -45,-26" fill="url(#gt)"/>
+          <polygon points="-45,-26 0,0 0,52 -45,26" fill="url(#gl)"/>
+          <polygon points="45,-26 0,0 0,52 45,26" fill="url(#gr)"/>
+          <g stroke="#0b0d10" stroke-width="1.4" fill="none" opacity=".5">
+            <polygon points="0,-52 45,-26 45,26 0,52 -45,26 -45,-26"/>
+            <path d="M0,-52 L0,0 M-45,-26 L0,0 M45,-26 L0,0 M0,0 L0,52"/>
+          </g>
+          <path d="M-45,-26 L0,-52 L45,-26" fill="none" stroke="#7fb0dd" stroke-width="1.4" opacity=".8"/>
+          <!-- BGC on the three visible faces (each skewed onto its plane) -->
+          <g font-family="Arial,Helvetica,sans-serif" font-weight="800" text-anchor="middle" dominant-baseline="central" letter-spacing="-0.02em">
+            <text transform="matrix(0.866,0.5,-0.866,0.5,0,-25)" font-size="40" fill="#243642">G</text>
+            <text transform="matrix(0.866,0.5,0,1,-22.5,12)" font-size="40" fill="#eef2f6">B</text>
+            <text transform="matrix(0.866,-0.5,0,1,22.5,12)" font-size="40" fill="#eef2f6">C</text>
+          </g>
+          <g clip-path="url(#cc)"><rect class="sheen" x="-70" y="-64" width="34" height="128" transform="skewX(-18)" fill="url(#gt)" opacity="0"/></g>
+        </svg>
+      </div>
+      <h1 class="wordmark">bit<span>graf</span><sup>™</sup></h1>
+      <p class="corp">Bit Graph Corporation</p>
+      <p class="thesis">We do not create. We ensure that what is created endures.</p>
+      <p class="lede">Bit Graph Corporation is the permanent settlement layer for creative sovereignty — the substrate upon which authorship is recorded, provenance preserved, and ownership rendered inviolable, in perpetuity.</p>
+    </div>
+  </div>
+
+  <!-- MANDATE -->
+  <section id="mandate" class="mandate"><div class="wrap">
+    <p class="label">Our Mission</p>
+    <p>Excellence is not our objective. It is our inheritance.</p>
+    <p class="lede">For a generation, Bit Graph Corporation has stood as the preeminent name in its field — a byword for distinction, integrity, and visionary stewardship. Ours is a storied history of unrivalled achievement: pioneering milestones, industry-defining firsts, and a body of accolades without equal among our peers. Admired by the discerning and emulated by the rest, the Corporation has, time and again, delivered outcomes of the very highest order. We do not aspire to greatness; we have long since attained it, and continue — with characteristic modesty — to surpass even ourselves. To lead is not our ambition. It is, and has ever been, simply our nature.</p>
+  </div></section>
+
+  <!-- PRINCIPLES -->
+  <section id="principles" class="principles"><div class="wrap">
+    <p class="label">Governing Principles</p>
+    <h2>Four commitments, held without qualification.</h2>
+    <div class="grid">
+      <div class="principle"><div class="n">I.</div><h3>Permanence</h3><p>That which is recorded shall not be undone, revised, or rescinded — by any party, in any epoch.</p></div>
+      <div class="principle"><div class="n">II.</div><h3>Provenance</h3><p>Every mark bears the name of its maker, immutably affixed and impossible to strip.</p></div>
+      <div class="principle"><div class="n">III.</div><h3>Stewardship</h3><p>The Corporation maintains the infrastructure. The Corporation does not maintain the assets.</p></div>
+      <div class="principle"><div class="n">IV.</div><h3>Non-Interference</h3><p>The instrument is issued; the Corporation withdraws. Sovereignty admits no landlord.</p></div>
+    </div>
+  </div></section>
+
+  <!-- CHAIRMAN -->
+  <section id="chairman" class="chairman"><div class="wrap">
+    <p class="label">A Statement from the Office of the Chairman</p>
+    <blockquote>Ownership is not granted. It is witnessed.</blockquote>
+    <cite>The Office of the Chairman · Bit Graph Corporation</cite>
+  </div></section>
+
+  <!-- EXCHANGE -->
+  <section id="contact" class="exchange"><div class="wrap">
+    <p class="label">The Exchange</p>
+    <h2>An orderly marketplace for sovereign works.</h2>
+    <p class="lede" style="max-width:52ch;margin:14px auto 0">The Bit Graph Exchange shall provide for the listing, transfer, and resale of created works, with attribution and creator entitlements enforced at the protocol layer.</p>
+    <div class="status"><span class="dot"></span> BGC://EXCHANGE&nbsp;—&nbsp;<b>PROVISIONING · MMXXVI</b></div>
+  </div></section>
+</main>
+
+<footer><div class="wrap cols">
+  <p class="legal">Bit Graph Corporation™ is a steward of on-chain permanence and issues no security. This communication is provided for informational purposes and constitutes neither an offer nor a solicitation. © MMXXVI Bit Graph Corporation. All rights reserved — <b>to their creators.</b>
+    <span class="tag" style="display:block">You are what you paint · Paint what you are</span>
+  </p>
+  <p class="mono">bitgraf.com<br><span style="color:var(--faint)">A property of Bit Graph Corporation</span></p>
+</div></footer>
+
+</body>
+</html>
